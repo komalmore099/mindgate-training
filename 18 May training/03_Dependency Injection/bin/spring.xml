@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- more bean definitions go here -->
+    
+<!--     <bean id="address" class="com.mindgate.pojo.Address"> -->
+<!--     <constructor-arg name="addressId" value="1"></constructor-arg> -->
+<!--     <constructor-arg name="street" value="sakki naka"></constructor-arg> -->
+<!--     <constructor-arg name="city" value="mumbai"></constructor-arg> -->
+<!--     <constructor-arg name="state" value="Maharashtra"></constructor-arg> -->
+<!--     </bean> -->
+    
+<!--     <bean id="employee" class="com.mindgate.pojo.Employee" scope="prototype"> -->
+    
+   
+<!--     <constructor-arg name="employeeId" value="101"></constructor-arg> -->
+<!--     <constructor-arg name="name" value="komal"></constructor-arg> -->
+<!--     <constructor-arg name="salary" value="500000"></constructor-arg> -->
+<!--     <constructor-arg name="homeAddress" ref="address"></constructor-arg> -->
+<!--     </bean> -->
+
+<!--  <bean id="address" class="com.mindgate.pojo.Address"> -->
+<!--     <property name="addressId" value="1"/> -->
+   
+<!--     <property name="street" value="sakki naka"/> -->
+<!--     <property name="city" value="mumbai"/> -->
+<!--     <property name="state" value="Maharashtra"/> -->
+<!--     </bean> -->
+    
+<!--     <bean id="employee" class="com.mindgate.pojo.Employee" scope="prototype"> -->
+    
+   
+<!--     <property name="employeeId" value="101"/> -->
+<!--     <property name="name" value="komal"/> -->
+<!--     <property name="salary" value="500000"/> -->
+<!--     <property name="homeAddress" ref="address"/> -->
+<!--     </bean> -->
+
+<bean id="homeAddress" class="com.mindgate.pojo.Address">
+    <property name="addressId" value="1"/>
+   
+    <property name="street" value="sakki naka"/>
+    <property name="city" value="mumbai"/>
+    <property name="state" value="Maharashtra"/>
+    </bean>
+    
+    <bean id="employee" class="com.mindgate.pojo.Employee"
+    scope="prototype" autowire="byName">
+    
+   
+    <property name="employeeId" value="101"/>
+    <property name="name" value="komal"/>
+    <property name="salary" value="500000"/>
+   
+    </bean>
+
+</beans>
